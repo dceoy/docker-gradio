@@ -1,0 +1,19 @@
+---
+version: '3'
+
+services:
+  gradio:
+    container_name: gradio
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: dceoy/gradio:latest
+    ports:
+      - 7860:7860
+    volumes:
+      - ${PWD}:/wd
+    working_dir: /wd
+    entrypoint:
+      - /usr/local/bin/gradio
+    command:
+      - run.py
