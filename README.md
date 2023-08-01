@@ -20,7 +20,7 @@ Usage
 Run Gradio
 
 ```sh
-$ docker container run --rm -p 8501:8501 -v ${PWD}:/wd -w /wd \
+$ docker container run --rm -p 7860:7860 -v ${PWD}:/wd -w /wd \
     dceoy/gradio run.py
 ```
 
